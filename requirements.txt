@@ -1,0 +1,12 @@
+numpy
+matplotlib
+tensorflow-gpu
+imageio
+imageio-ffmpeg
+pickle
+Pillow
+scipy
+skvideo
+ffmpeg
+jupyter
+jupyter-notebook

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="imitation-learning---readme">Imitation Learning - README</h1>
+<p>This file outlines the use of the code that was constructed as part of the MSc Robotics thesis at Cranfield University.</p>
+<p>The jupyter-notebook can be run from either a Windows or Linux based operating system.</p>
+<p>The Simulation requires a Linux-based operating system, with Ubuntu 21.04 being used. If a different operating system is being used, it cannot be guaranteed that the simulation will be able to run.</p>
+<p>Before any code can be run, please ensure all the following library requirements are installed. This can be done by navigating the the “Code” folder in the command prompt and entering the following command <code>pip install -r requirements.txt</code>.</p>
+<h2 id="library-requirements">Library Requirements</h2>
+<ul>
+<li><strong>Numpy</strong></li>
+<li><strong>matplotlib</strong></li>
+<li><strong>Tensorflow v2.0</strong></li>
+<li><strong>imageio</strong></li>
+<li><strong>pickle</strong></li>
+<li><strong>Pillow</strong></li>
+<li><strong>Scipy</strong></li>
+<li><strong>skvideo</strong></li>
+<li><strong>FFmpeg</strong></li>
+<li><strong>Jupyter-Notebook</strong></li>
+</ul>
+<p><em>The following libraries and software will not be installed through the  <code>pip install -r requirements.txt</code> command and must be installed manually as follows:</em></p>
+<ul>
+<li><strong>RLLab</strong> - This can be installed following the instructions here: <a href="https://rllab.readthedocs.io/en/latest/user/installation.html">https://rllab.readthedocs.io/en/latest/user/installation.html</a> and must be contained in the same folder as the rest of the code.</li>
+<li><em>Preferably</em> <strong>CUDA</strong> &amp; <strong>cuDNN</strong> - To allow for faster computation during training.<br>
+CUDA can be installed following the instruction here: <a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a><br>
+cuDNN can be installed following the instructions here: <a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></li>
+</ul>
+<h1 id="usage">Usage</h1>
+<h2 id="real-world">Real-world</h2>
+<ol>
+<li>Navigate to the “Code” folder in the command prompt.</li>
+<li>Run the command <code>jupyter-notebook</code>. If this fails, attempt the following commands: <code>jupyter notebook</code>, <code>jupyter lab</code></li>
+<li>Open the <em>Pushing.ipynb</em> file within jupyter.</li>
+<li>Run the jupyter-notebook, paying attention the markdown cells for further instruction on operation.</li>
+</ol>
+<h2 id="simulation">Simulation</h2>
+<p>For the simulation, there are two methods to load the data, either using the <em>gen_videos.py</em> file to generate the dataset from within RLlab, explaing below. Alternatively, the <em>expert_push.pkl</em> can be used to automatically generate the dataset from within the jupyter-notebook.</p>
+<ol>
+<li>Navigate to the “Code” folder in the command prompt.</li>
+<li>Run the command <code>jupyter-notebook</code>. If this fails, attempt the following commands: <code>jupyter notebook</code>, <code>jupyter lab</code></li>
+<li>Open the <em>Pushing-sim.ipynb</em> file within jupyter.</li>
+<li>Run the jupyter-notebook, paying attention the markdown cells for further instruction on operation.</li>
+</ol>
+<p>For the simulation, RLlab is required which can be installed by following the instructions here: <a href="https://rllab.readthedocs.io/en/latest/user/installation.html">https://rllab.readthedocs.io/en/latest/user/installation.html</a><br>
+MuJoCo physics-based simulator is also required, which requires a license (For this project, a temporary student-license was used).<br>
+6. Once RLlab is installed, launch RLlab and run the <em>gen_videos.py</em> file to generate the dataset within the simulation.<br>
+7. Use the dataset generated from <em>gen_videos.py</em> in the <em>Pushing-sim.ipynb</em> to train the model.<br>
+8. Save the model using the code within the jupyter-notebook and link the directory of the model and the generated dataset to the <em>run_ddpg_push.py</em> file in the following line of code <code>return dict(nvp=1, vp=vp, object=object_, goal=goal, imsize=(64, 64), geoms=geoms, name="push", modelname='Models/ctxskiprealtransform127_11751', meanfile=None, modeldata='Models/greenctxstartgoalvpdistractvalid.npy')</code>, replacing the “modelname” and “modeldata” parameters with the saved model from training and the dataset respectively; with the dataset being stored as .npy file.<br>
+9. Run the <em>run_ddpg_push.py</em> file to perform the reinforcement learning component in simulation.</p>
+</div>
+</body>
+
+</html>
