@@ -27,6 +27,7 @@ Usage
 
 Real-world
 ----------
+**Note**: This repository does not contain the data necessary to replicate the steps in the Jupyter Notebook. The data used was proprietary and cannot be uploaded. Examples of the data and processing are shown within the notebooks.
 
 1.  Navigate to the “notebooks” folder in the command prompt.
 2.  Run the command `jupyter-notebook`. If this fails, attempt the following commands: `jupyter notebook`, `jupyter lab`
