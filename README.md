@@ -14,16 +14,7 @@ Before any code can be run, please ensure all the following library requirements
 Library Requirements
 --------------------
 
-*   **Numpy**
-*   **matplotlib**
-*   **Tensorflow v2.0**
-*   **imageio**
-*   **pickle**
-*   **Pillow**
-*   **Scipy**
-*   **skvideo**
-*   **FFmpeg**
-*   **Jupyter-Notebook**
+1. Most requirements can be installed through the requirements.txt file, `pip install -r requirements.txt`
 
 _The following libraries and software will not be installed through the `pip install -r requirements.txt` command and must be installed manually as follows:_
 
