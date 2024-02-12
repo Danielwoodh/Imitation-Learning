@@ -9,12 +9,11 @@ The jupyter-notebook can be run from either a Windows or Linux based operating s
 
 The Simulation requires a Linux-based operating system, with Ubuntu 21.04 being used. If a different operating system is being used, it cannot be guaranteed that the simulation will be able to run.
 
-Before any code can be run, please ensure all the following library requirements are installed. This can be done by navigating the the “Code” folder in the command prompt and entering the following command `pip install -r requirements.txt`.
-
 Library Requirements
 --------------------
+Before any code can be run, please ensure all the following library requirements are installed.
 
-1. Most requirements can be installed through the requirements.txt file, `pip install -r requirements.txt`
+1. Most requirements can be installed through the requirements.txt file, using the following command: `pip install -r requirements.txt`
 
 _The following libraries and software will not be installed through the `pip install -r requirements.txt` command and must be installed manually as follows:_
 
