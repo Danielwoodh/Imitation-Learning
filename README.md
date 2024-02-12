@@ -38,7 +38,7 @@ Usage
 Real-world
 ----------
 
-1.  Navigate to the “Code” folder in the command prompt.
+1.  Navigate to the “notebooks” folder in the command prompt.
 2.  Run the command `jupyter-notebook`. If this fails, attempt the following commands: `jupyter notebook`, `jupyter lab`
 3.  Open the _Pushing.ipynb_ file within jupyter.
 4.  Run the jupyter-notebook, paying attention the markdown cells for further instruction on operation.
@@ -48,7 +48,7 @@ Simulation
 
 For the simulation, there are two methods to load the data, either using the _gen\_videos.py_ file to generate the dataset from within RLlab, explaing below. Alternatively, the _expert\_push.pkl_ can be used to automatically generate the dataset from within the jupyter-notebook.
 
-1.  Navigate to the “Code” folder in the command prompt.
+1.  Navigate to the “notebooks” folder in the command prompt.
 2.  Run the command `jupyter-notebook`. If this fails, attempt the following commands: `jupyter notebook`, `jupyter lab`
 3.  Open the _Pushing-sim.ipynb_ file within jupyter.
 4.  Run the jupyter-notebook, paying attention the markdown cells for further instruction on operation.
