@@ -45,8 +45,12 @@ For the simulation, there are two methods to load the data, either using the _ge
 
 For the simulation, RLlab is required which can be installed by following the instructions here: [https://rllab.readthedocs.io/en/latest/user/installation.html](https://rllab.readthedocs.io/en/latest/user/installation.html) 
 
-MuJoCo physics-based simulator is also required, which requires a license (For this project, a temporary student-license was used).  
-6. Once RLlab is installed, launch RLlab and run the _gen\_videos.py_ file to generate the dataset within the simulation.  
-7. Use the dataset generated from _gen\_videos.py_ in the _Pushing-sim.ipynb_ to train the model.  
-8. Save the model using the code within the jupyter-notebook and link the directory of the model and the generated dataset to the _run\_ddpg\_push.py_ file in the following line of code `return dict(nvp=1, vp=vp, object=object_, goal=goal, imsize=(64, 64), geoms=geoms, name="push", modelname='Models/ctxskiprealtransform127_11751', meanfile=None, modeldata='Models/greenctxstartgoalvpdistractvalid.npy')`, replacing the “modelname” and “modeldata” parameters with the saved model from training and the dataset respectively; with the dataset being stored as .npy file.  
+MuJoCo physics-based simulator is also required, which requires a license (For this project, a temporary student-license was used).
+
+6. Once RLlab is installed, launch RLlab and run the _gen\_videos.py_ file to generate the dataset within the simulation.
+   
+7. Use the dataset generated from _gen\_videos.py_ in the _Pushing-sim.ipynb_ to train the model.
+   
+8. Save the model using the code within the jupyter-notebook and link the directory of the model and the generated dataset to the _run\_ddpg\_push.py_ file in the following line of code `return dict(nvp=1, vp=vp, object=object_, goal=goal, imsize=(64, 64), geoms=geoms, name="push", modelname='Models/ctxskiprealtransform127_11751', meanfile=None, modeldata='Models/greenctxstartgoalvpdistractvalid.npy')`, replacing the “modelname” and “modeldata” parameters with the saved model from training and the dataset respectively; with the dataset being stored as .npy file.
+    
 9. Run the _run\_ddpg\_push.py_ file to perform the reinforcement learning component in simulation.
